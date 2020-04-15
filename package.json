@@ -1,0 +1,33 @@
+{
+  "name": "azure",
+  "version": "1.0.0",
+  "description": "bot for discord",
+  "readme": "README.md",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O3IL/Azure.git"
+  },
+  "author": "O3IL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O3IL/Azure/issues"
+  },
+  "homepage": "https://github.com/O3IL/Azure#readme",
+  "dependencies": {
+    "discord-anti-spam": "^2.4.1",
+    "discord.js": "^11.6.4",
+    "dotenv": "^8.2.0",
+    "moment": "^2.24.0",
+    "request": "^2.88.2",
+    "weather-js": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
