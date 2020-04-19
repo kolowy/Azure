@@ -107,7 +107,7 @@ bot.on('ready', () => {
   setInterval(setAvatar, 3600000);
   setPresence(bot);
   setInterval(setPresence, 3600000);
-  antispam(bot, {
+  new antispam(bot, {
     warnBuffer: 3, // Maximum ammount of messages allowed to send in the interval time before getting warned.
     maxBuffer: 5, // Maximum amount of messages allowed to send in the interval time before getting banned.
     interval: 1000, // Amount of time in ms users can send the maxim amount of messages(maxBuffer) before getting banned. 
@@ -154,17 +154,6 @@ bot.on('message', message => {
   // AUTO
   if (responseObject[message.content]) {
     message.channel.send(responseObject[message.content])
-  }
-
-  // DESTROY
-  if (message.content === prefix + 'destroyfor.killyy') {
-    if (!message.guild.member(message.author.id) === (process.env.OWNER_ID)) {
-      return message.channel.send("You cant use this!");
-    } else {
-      bot.destroy()
-        .then(() => console.log("$-destroy  | " + `${message.author.username}` + `${message.channel.guild.name}`)) // Keep this for check if a user have a bug for kill the bot.
-        .catch(console.error);
-    }
   }
 
 });
@@ -704,6 +693,23 @@ bot.on('message', message => {
     } else {
       message.channel.send("Parameter [object] please");
     }
+  }
+
+  if (message.content.startsWith(prefix + "github")) {
+    var embed = new Discord.RichEmbed()
+      .setTitle(`Github:`, message.guild.iconURL)
+      .setDescription(" ")
+      .setColor(color)
+      .addField("Link:", `[O3IL/Azure](https://github.com/O3IL/Azure)`)
+      .addField("Invite link:", `[Discord link for Azure](https://discordapp.com/oauth2/authorize?client_id=699338337848262726&scope=bot&permissions=8)`)
+      .addField("STAFF:", "╲⎝⧹⎫⎝ FJ®⎠⎧⧸⎠╱#3224 --- Owner/Dev\n"
+        + "Karal#9133 --- Co-Dev")
+      .addField("Donation:", `[Thanks!](https://github.com/O3IL/Azure)`)
+      //.addField("Link:",`https://www.qwant.com/#q=` + args.join('%20'))
+      .setFooter(nameb + vo)
+      //.setThumbnail(bot.user.displayAvatarURL);
+      .setTimestamp();
+    message.channel.send(embed)
   }
 
 });
