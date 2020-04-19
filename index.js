@@ -703,7 +703,8 @@ bot.on('message', message => {
       .addField("Link:", `[O3IL/Azure](https://github.com/O3IL/Azure)`)
       .addField("Invite link:", `[Discord link for Azure](https://discordapp.com/oauth2/authorize?client_id=699338337848262726&scope=bot&permissions=8)`)
       .addField("STAFF:", "╲⎝⧹⎫⎝ FJ®⎠⎧⧸⎠╱#3224 --- Owner/Dev\n"
-        + "Karal#9133 --- Co-Dev")
+        + "Karal#9133 --- Co-Dev\n"
+        + "kolowy#6639 --- Co-Dev")
       .addField("Donation:", `[Thanks!](https://github.com/O3IL/Azure)`)
       //.addField("Link:",`https://www.qwant.com/#q=` + args.join('%20'))
       .setFooter(nameb + vo)
